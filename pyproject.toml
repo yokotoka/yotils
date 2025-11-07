@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "yotils"
-version = "0.1.0"
+dynamic = ["version"]
 description = "A Python utility library"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -27,6 +27,9 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/yokotoka/yotils"
 Repository = "https://github.com/yokotoka/yotils"
+
+[tool.hatch.version]
+path = "yotils/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["yotils"]
